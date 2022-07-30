@@ -19,14 +19,14 @@
        </form>
     </div> -->
 
-    <div class="col-md-6"><h3 class="text-center">Weather Details:</h3>
+    <div><h3 class="text-center">Weather Details:</h3>
       <p class="text-center">Name of the city : {{this.weatherData?.name}}</p>
       <p class="text-center">Temperature {{this.weatherData?.main.temp}}°C</p>
       <p class="text-center">Humidity {{this.weatherData?.main.humidity}} %</p>
       <p class="text-center">Weather status {{this.weatherData?.weather[0].description}}</p>
       <p class="text-center">Cloud info {{this.weatherData?.clouds.all}} %</p>
       <p class="text-center">Wind info {{this.weatherData?.wind.deg}} degrees {{this.weatherData?.wind.speed}} meter/sec</p>
-      <img src="http://openweathermap.org/img/w/{{this.weatherData?.weather[0].icon}}.png">
+      <img src="http://openweathermap.org/img/w/{{this.weatherData?.weather[0].icon}}.png" class="center">
     </div>
   </div>
 </div>

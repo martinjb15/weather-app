@@ -4,5 +4,5 @@ import { ForecastComponent } from './forecast/forecast.component';
 
 export const allAppRoutes: Routes = [
   { path: '', component: WeatherComponent },
-  { path: '', component: ForecastComponent}
+  { path: 'app-forecast', component: ForecastComponent}
 ];
