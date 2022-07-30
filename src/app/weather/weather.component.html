@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+  <!--  <div class="col-md-6"><h3 class="text-center">Search for Weather:</h3>
+     remove form search not in scope
+      <form [formGroup]="weatherSearchForm">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocation"
+            placeholder="Please input a Location"
+            formControlName="location" />
+         </div>
+         <div class="text-center">
+          <button type="submit" class="btn btn-success btn-md">
+            Search for the weather</button>
+         </div>
+       </form>
+    </div> -->
+
+    <div class="col-md-6"><h3 class="text-center">Weather Details:</h3>
+      <p class="text-center">Name of the city : {{this.weatherData?.name}}</p>
+      <p class="text-center">Temperature {{this.weatherData?.main.temp}}°C</p>
+      <p class="text-center">Humidity {{this.weatherData?.main.humidity}} %</p>
+      <p class="text-center">Weather status {{this.weatherData?.weather[0].description}}</p>
+      <p class="text-center">Cloud info {{this.weatherData?.clouds.all}} %</p>
+      <p class="text-center">Wind info {{this.weatherData?.wind.deg}} degrees {{this.weatherData?.wind.speed}} meter/sec</p>
+      <img src="http://openweathermap.org/img/w/{{this.weatherData?.weather[0].icon}}.png">
+    </div>
+  </div>
+</div>
