@@ -1,89 +1,61 @@
+<!-- popilate fields with data from the api then clean up the design-->
 <div class="container-fluid">
-  <div><h3 class="text-center">14 day Weather Forcast:</h3>
+  <div><h3 class="text-center">7 day Weather Forcast:</h3>
   </div>
   <div class="row">
     <div class="col-md-2 col-sm-2 col-xs-12 " >
-      <p class="text-center"> {{this.weatherData?.list[0].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[0].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[0].weather[0].icon}}.png">
+
+      <p class="text-center"> Today</p>
+      <p class="text-center"> {{this.weatherData?.daily[0].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[0].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[0].weather[0].icon}}.png">
     </div>
 
     <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[1].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[1].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[1].weather[0].icon}}.png">
+      <p class="text-center"> Tomorrow</p>
+      <p class="text-center"> {{this.weatherData?.daily[1].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[1].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[1].weather[0].icon}}.png">
       </div>
 
       <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[2].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[2].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[2].weather[0].icon}}.png">
+      <p class="text-center"> {{ date2 | date }}</p>
+      <p class="text-center"> {{this.weatherData?.daily[2].dt_txt}}</p>
+      <p class="text-center"> {{this.weatherData?.daily[2].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[2].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[2].weather[0].icon}}.png">
       </div>
 
       <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[3].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[3].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[3].weather[0].icon}}.png">
+        <p class="text-center"> {{ date3 | date }}</p>
+      <p class="text-center"> {{this.weatherData?.daily[3].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[3].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[3].weather[0].icon}}.png">
       </div>
 
       <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[4].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[4].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[4].weather[0].icon}}.png">
+        <p class="text-center"> {{ date4 | date }}</p>
+      <p class="text-center"> {{this.weatherData?.daily[4].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[4].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[4].weather[0].icon}}.png">
       </div>
 
     <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[5].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[5].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[5].weather[0].icon}}.png">
+      <p class="text-center"> {{ date5 | date }}</p>
+      <p class="text-center"> {{this.weatherData?.daily[5].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[5].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[5].weather[0].icon}}.png">
     </div>
+
   </div>
   <div class="row">
         <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center">{{this.weatherData?.list[6].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[6].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[6].weather[0].icon}}.png">
+      <p class="text-center"> {{ date6 | date }}</p>
+      <p class="text-center"> {{this.weatherData?.daily[6].dt_txt}}</p>
+      <p class="text-center">{{this.weatherData?.daily[6].temp.day}}°C</p>
+      <p class="text-center">Weather : {{this.weatherData?.daily[6].weather[0].description}}</p>
+      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[6].weather[0].icon}}.png">
       </div>
 
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[7].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[7].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[7].weather[0].icon}}.png">
-    </div>
-
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center">{{this.weatherData?.list[8].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[8].weather[0].description}}</p>
-      <img class="center"  src="http://openweathermap.org/img/w/{{this.weatherData?.list[8].weather[0].icon}}.png">
-    </div>
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[9].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[9].weather[0].description}}</p>
-      <img class="center"  src="http://openweathermap.org/img/w/{{this.weatherData?.list[9].weather[0].icon}}.png">
-    </div>
-
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center">{{this.weatherData?.list[10].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[10].weather[0].description}}</p>
-      <img class="center"  src="http://openweathermap.org/img/w/{{this.weatherData?.list[10].weather[0].icon}}.png">
-    </div>
-
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[11].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[11].weather[0].description}}</p>
-      <img  class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[11].weather[0].icon}}.png">
-    </div>
-  </div>
-    <div class="row">
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[12].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[12].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.list[12].weather[0].icon}}.png">
-      </div>
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{this.weatherData?.list[13].main.temp}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.list[13].weather[0].description}}</p>
-      <img class="center"  src="http://openweathermap.org/img/w/{{this.weatherData?.list[13].weather[0].icon}}.png">
-    </div>
   </div>
 </div>
