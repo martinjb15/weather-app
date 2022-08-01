@@ -18,7 +18,7 @@ export class OWAPIService {
     getWeatherFourteenDays(location:any){
       return this.http.get(
         // could've put the api key in enviorment.ts
-          'https://api.openweathermap.org/data/2.5/forecast?q='+"london" + '&cnt=14&appid=6e499dd3342bc36003ad9c03d22091c4&units=metric'
+          'https://api.openweathermap.org/data/3.0/onecall?&exclude=current,minutely,hourly,alerts&q='+"london" + '&cnt=14&appid=6e499dd3342bc36003ad9c03d22091c4&units=metric'
       );
     }
 }
