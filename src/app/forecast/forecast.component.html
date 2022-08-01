@@ -1,61 +1,62 @@
 <!-- popilate fields with data from the api then clean up the design-->
 <div class="container-fluid">
-  <div><h3 class="text-center">7 day Weather Forcast:</h3>
-  </div>
-  <div class="row">
-    <div class="col-md-2 col-sm-2 col-xs-12 " >
+  <div><h3 class="text-center">7 day Weather Forcast: London</h3></div>
+<div class="card card-1">
+  <div id="demo" class="carousel slide" data-ride="carousel">
 
-      <p class="text-center"> Today</p>
-      <p class="text-center"> {{this.weatherData?.daily[0].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[0].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[0].weather[0].icon}}.png">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2" class="active"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[0].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[0].weather[0].icon}}.png"/></div>
+            <div class="row row3">Today</div>
+          </div>
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[1].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[1].weather[0].icon}}.png"/></div>
+            <div class="row row3">Tomorrow</div>
+          </div>
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[2].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[2].weather[0].icon}}.png"/></div>
+            <div class="row row3">{{ date2 | date }}</div>
+          </div>
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[3].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[3].weather[0].icon}}.png"/></div>
+            <div class="row row3">{{ date3 | date }}</div>
+          </div>
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[4].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[4].weather[0].icon}}.png"/></div>
+            <div class="row row3">{{ date4 | date }}</div>
+          </div>
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[5].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[5].weather[0].icon}}.png"/></div>
+            <div class="row row3">{{ date5 | date }}</div>
+          </div>
+          <div class="col">
+            <div class="row row1">{{this.weatherData?.daily[6].temp.day}}°C</div>
+            <div class="row row2"><img class="img-fluid" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[6].weather[0].icon}}.png"/></div>
+            <div class="row row3">{{ date6 | date }}</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> Tomorrow</p>
-      <p class="text-center"> {{this.weatherData?.daily[1].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[1].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[1].weather[0].icon}}.png">
-      </div>
-
-      <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{ date2 | date }}</p>
-      <p class="text-center"> {{this.weatherData?.daily[2].dt_txt}}</p>
-      <p class="text-center"> {{this.weatherData?.daily[2].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[2].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[2].weather[0].icon}}.png">
-      </div>
-
-      <div class="col-md-2 col-sm-2 col-xs-12">
-        <p class="text-center"> {{ date3 | date }}</p>
-      <p class="text-center"> {{this.weatherData?.daily[3].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[3].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[3].weather[0].icon}}.png">
-      </div>
-
-      <div class="col-md-2 col-sm-2 col-xs-12">
-        <p class="text-center"> {{ date4 | date }}</p>
-      <p class="text-center"> {{this.weatherData?.daily[4].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[4].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[4].weather[0].icon}}.png">
-      </div>
-
-    <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{ date5 | date }}</p>
-      <p class="text-center"> {{this.weatherData?.daily[5].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[5].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[5].weather[0].icon}}.png">
-    </div>
-
   </div>
-  <div class="row">
-        <div class="col-md-2 col-sm-2 col-xs-12">
-      <p class="text-center"> {{ date6 | date }}</p>
-      <p class="text-center"> {{this.weatherData?.daily[6].dt_txt}}</p>
-      <p class="text-center">{{this.weatherData?.daily[6].temp.day}}°C</p>
-      <p class="text-center">Weather : {{this.weatherData?.daily[6].weather[0].description}}</p>
-      <img class="center" src="http://openweathermap.org/img/w/{{this.weatherData?.daily[6].weather[0].icon}}.png">
-      </div>
+</div>
 
-  </div>
+
 </div>
